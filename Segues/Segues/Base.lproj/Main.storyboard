@@ -24,13 +24,12 @@
                                     <segue destination="Ke9-Pp-1hp" kind="show" id="aqB-7e-Es9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSq-30-ZPx">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSq-30-ZPx">
                                 <rect key="frame" x="63" y="601" width="133" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password"/>
                                 <connections>
-                                    <action selector="forgotPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zyc-Y3-ySM"/>
+                                    <action selector="forgotPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Kp-ea-b90"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3vT-az-cDm">
@@ -43,13 +42,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNf-VW-dcM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNf-VW-dcM">
                                 <rect key="frame" x="231" y="601" width="137" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Username"/>
                                 <connections>
-                                    <action selector="forgotUsername:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JWL-o0-a3C"/>
+                                    <action selector="forgotUsername:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KIG-uO-LVn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -60,17 +58,24 @@
                             <constraint firstItem="hlO-ri-pMk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="5Z1-7D-kLF"/>
                             <constraint firstItem="J1a-d2-8Wt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7Tc-ds-tNf"/>
                             <constraint firstItem="3vT-az-cDm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7XT-OF-nBf"/>
+                            <constraint firstItem="bNf-VW-dcM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CSq-30-ZPx" secondAttribute="trailing" symbolic="YES" id="8Ry-dw-4Dx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J1a-d2-8Wt" secondAttribute="trailing" constant="20" id="BXE-t9-mfu"/>
                             <constraint firstItem="hlO-ri-pMk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Cx6-Ln-Svl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3vT-az-cDm" secondAttribute="trailing" constant="20" id="EeM-Ii-4ri"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bNf-VW-dcM" secondAttribute="trailing" constant="46" id="GzU-zB-vgL"/>
+                            <constraint firstItem="CSq-30-ZPx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="HUz-Xy-XJZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hlO-ri-pMk" secondAttribute="trailing" constant="20" id="Oku-hl-gCV"/>
+                            <constraint firstItem="bNf-VW-dcM" firstAttribute="top" secondItem="J1a-d2-8Wt" secondAttribute="bottom" constant="22" id="Otk-cC-9Gw"/>
                             <constraint firstItem="J1a-d2-8Wt" firstAttribute="top" secondItem="3vT-az-cDm" secondAttribute="bottom" constant="20" id="bDo-GI-cev"/>
+                            <constraint firstItem="bNf-VW-dcM" firstAttribute="baseline" secondItem="CSq-30-ZPx" secondAttribute="baseline" id="oEB-ag-S9e"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="BlI-dd-bhE"/>
                     <connections>
+                        <outlet property="forgotPassword" destination="CSq-30-ZPx" id="ZVv-7a-N8H"/>
+                        <outlet property="forgotUsername" destination="bNf-VW-dcM" id="tD2-Ql-gnY"/>
                         <outlet property="username" destination="hlO-ri-pMk" id="5wG-UU-Rka"/>
-                        <segue destination="Ke9-Pp-1hp" kind="show" id="jMB-EL-6ae"/>
+                        <segue destination="Ke9-Pp-1hp" kind="show" identifier="errorPage" id="jMB-EL-6ae"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
