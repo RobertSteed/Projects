@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jhw-GH-y2z">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="68"/>
+        </scene>
+        <!--Family-->
+        <scene sceneID="gvv-xN-NpR">
+            <objects>
+                <viewController id="OCU-ZS-hFs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y5L-zX-2EA">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrv-aA-Hgj">
+                                <rect key="frame" x="145.66666666666666" y="144" width="136.99999999999997" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W07-2n-oZG">
+                                <rect key="frame" x="20" y="254.00000000000003" width="388" height="81.333333333333343"/>
+                                <string key="text">I am the youngest of 4 siblings. My family is spread out. My partents are in Alaska, my brother is in China, my sister is in Texas, and only my brother remains in Utah. We are all married </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cgr-sT-SZ0"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                        <constraints>
+                            <constraint firstItem="W07-2n-oZG" firstAttribute="top" secondItem="Wrv-aA-Hgj" secondAttribute="bottom" constant="50" id="57t-im-Y3j"/>
+                            <constraint firstItem="Wrv-aA-Hgj" firstAttribute="centerX" secondItem="y5L-zX-2EA" secondAttribute="centerX" id="6zb-My-IxF"/>
+                            <constraint firstItem="cgr-sT-SZ0" firstAttribute="trailing" secondItem="W07-2n-oZG" secondAttribute="trailing" constant="20" id="9XL-FN-Whg"/>
+                            <constraint firstItem="W07-2n-oZG" firstAttribute="leading" secondItem="cgr-sT-SZ0" secondAttribute="leading" constant="20" id="HNq-d4-N3W"/>
+                            <constraint firstItem="Wrv-aA-Hgj" firstAttribute="top" secondItem="cgr-sT-SZ0" secondAttribute="top" constant="100" id="c3P-GX-iAd"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Family" image="lasso" catalog="system" id="HiR-pP-Pcz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6SV-ov-lii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1314" y="-191"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="QgO-zL-ovX">
+            <objects>
+                <viewController id="TSO-nd-bqR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zio-cg-EkE">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYd-42-vXT">
+                                <rect key="frame" x="110" y="144" width="208" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hx2-Dn-lpg">
+                                <rect key="frame" x="20" y="254" width="388" height="162.33333333333337"/>
+                                <string key="text">I grew up mostly in Utah. I spent a few years in Germany when I was a kid. My junior year was spent in Hong Kong. I spent two years in Russia. I met my wife while I was in the MTC. She went to Ukraine. I have many amazing friends and right now I am going to school and working while trying to find the true motivation to start on many different ideas for my own business </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aph-mY-iGn"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="hx2-Dn-lpg" firstAttribute="top" secondItem="CYd-42-vXT" secondAttribute="bottom" constant="50" id="BAg-fk-2cL"/>
+                            <constraint firstItem="CYd-42-vXT" firstAttribute="top" secondItem="aph-mY-iGn" secondAttribute="top" constant="100" id="LgN-Lr-hvr"/>
+                            <constraint firstItem="hx2-Dn-lpg" firstAttribute="leading" secondItem="aph-mY-iGn" secondAttribute="leading" constant="20" id="MRa-LT-qjc"/>
+                            <constraint firstItem="aph-mY-iGn" firstAttribute="trailing" secondItem="hx2-Dn-lpg" secondAttribute="trailing" constant="20" id="aqS-cv-zAF"/>
+                            <constraint firstItem="CYd-42-vXT" firstAttribute="centerX" secondItem="Zio-cg-EkE" secondAttribute="centerX" id="ft2-Jh-tQy"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About" image="lock.open" catalog="system" id="QTG-Ca-wNh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JyC-iM-dNM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1463.768115942029" y="913.39285714285711"/>
+        </scene>
+        <!--Hobbies-->
+        <scene sceneID="q08-xc-lWn">
+            <objects>
+                <viewController id="Irg-Up-Cdb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LSJ-Mi-Abu">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hobbies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neV-Ia-yHu">
+                                <rect key="frame" x="124.66666666666667" y="144" width="178.66666666666663" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JzN-3s-p89">
+                                <rect key="frame" x="20" y="254.00000000000003" width="388" height="81.333333333333343"/>
+                                <string key="text">I live to hunt. I love firearms. I love politics. I enjoy playing video games. Haning out with my wife is a must. I am big into keeping in touch with my friends</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3Af-6B-DzN"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="neV-Ia-yHu" firstAttribute="centerX" secondItem="LSJ-Mi-Abu" secondAttribute="centerX" id="DjF-iv-aDs"/>
+                            <constraint firstItem="neV-Ia-yHu" firstAttribute="top" secondItem="3Af-6B-DzN" secondAttribute="top" constant="100" id="TIv-JJ-QgB"/>
+                            <constraint firstItem="3Af-6B-DzN" firstAttribute="trailing" secondItem="JzN-3s-p89" secondAttribute="trailing" constant="20" id="UAF-3y-EFH"/>
+                            <constraint firstItem="JzN-3s-p89" firstAttribute="top" secondItem="neV-Ia-yHu" secondAttribute="bottom" constant="50" id="lm8-uV-BZp"/>
+                            <constraint firstItem="JzN-3s-p89" firstAttribute="leading" secondItem="3Af-6B-DzN" secondAttribute="leading" constant="20" id="t2J-UH-t6x"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hobbies" image="book.closed" catalog="system" id="ngO-hg-igm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vTj-Lx-FVZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2197.1014492753625" y="452.67857142857139"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ocf-Jb-Mce">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jhw-GH-y2z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ah0-yv-1UK">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="TSO-nd-bqR" kind="relationship" relationship="viewControllers" id="Dxj-tM-Nrk"/>
+                        <segue destination="Irg-Up-Cdb" kind="relationship" relationship="viewControllers" id="7Ub-5t-lyi"/>
+                        <segue destination="OCU-ZS-hFs" kind="relationship" relationship="viewControllers" id="V0h-g6-ZqJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wn6-N0-J7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="553.62318840579712" y="913.39285714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book.closed" catalog="system" width="115" height="128"/>
+        <image name="lasso" catalog="system" width="128" height="118"/>
+        <image name="lock.open" catalog="system" width="128" height="110"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
