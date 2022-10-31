@@ -18,6 +18,7 @@
 		75B1D12C28E7414B002A138D /* Order_of_EventsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B1D12B28E7414B002A138D /* Order_of_EventsUITestsLaunchTests.swift */; };
 		75B1D13928E744CD002A138D /* MiddleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B1D13828E744CD002A138D /* MiddleViewController.swift */; };
 		75B1D13B28E74500002A138D /* LastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B1D13A28E74500002A138D /* LastViewController.swift */; };
+		75B1D1B528EC8E07002A138D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B1D1B428EC8E07002A138D /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		75B1D12B28E7414B002A138D /* Order_of_EventsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order_of_EventsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		75B1D13828E744CD002A138D /* MiddleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleViewController.swift; sourceTree = "<group>"; };
 		75B1D13A28E74500002A138D /* LastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastViewController.swift; sourceTree = "<group>"; };
+		75B1D1B428EC8E07002A138D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				75B1D10A28E74149002A138D /* SceneDelegate.swift */,
 				75B1D10C28E74149002A138D /* ViewController.swift */,
 				75B1D10E28E74149002A138D /* Main.storyboard */,
+				75B1D1B428EC8E07002A138D /* SecondViewController.swift */,
 				75B1D11128E7414A002A138D /* Assets.xcassets */,
 				75B1D11328E7414A002A138D /* LaunchScreen.storyboard */,
 				75B1D11628E7414A002A138D /* Info.plist */,
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75B1D1B528EC8E07002A138D /* SecondViewController.swift in Sources */,
 				75B1D10D28E74149002A138D /* ViewController.swift in Sources */,
 				75B1D13B28E74500002A138D /* LastViewController.swift in Sources */,
 				75B1D10928E74149002A138D /* AppDelegate.swift in Sources */,

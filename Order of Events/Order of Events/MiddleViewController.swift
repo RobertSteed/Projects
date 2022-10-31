@@ -8,12 +8,41 @@
 import UIKit
 
 class MiddleViewController: UIViewController {
+    
+    
+    @IBOutlet weak var middleLabel: UILabel!
+    
+    var eventNumber: Int = 1
+    
+    func addEvent(from: String) {
+        if let existingText = middleLabel.text {
+            middleLabel.text = "\(existingText)\nEvent Number \(eventNumber) was \(from)"
+            eventNumber += 1
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//       addEvent(from: "viewWillLoad")
+//        addEvent(from: "viewDidLoad")
+//        addEvent(from: "viewWillDisappear")
+//        addEvent(from: "viewDidDisappear")
+        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        addEvent(from: "viewWillAppear")
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        addEvent(from: "viewDidAppear")
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        addEvent(from: "viewWillDisappear")
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        addEvent(from: "viewDidDisappear")
+    }
+    
     
 
     /*
