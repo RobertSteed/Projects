@@ -62,16 +62,16 @@
 		18E8589023A95DC1009A02B5 /* EmojiDictionary */ = {
 			isa = PBXGroup;
 			children = (
+				18E8589A23A95DC2009A02B5 /* Assets.xcassets */,
 				18E8589F23A95DC2009A02B5 /* Info.plist */,
-				18E858A723A95F64009A02B5 /* Main.storyboard */,
 				18E8589123A95DC1009A02B5 /* AppDelegate.swift */,
 				18E858A523A95EC7009A02B5 /* Emoji.swift */,
 				18E858A923A9616D009A02B5 /* EmojiTableViewController.swift */,
 				188F675B23AAC17B007E2064 /* AddEditEmojiTableViewController.swift */,
 				188F675923AAB6D5007E2064 /* EmojiTableViewCell.swift */,
 				18E8589323A95DC1009A02B5 /* SceneDelegate.swift */,
-				18E8589A23A95DC2009A02B5 /* Assets.xcassets */,
 				18E8589C23A95DC2009A02B5 /* LaunchScreen.storyboard */,
+				18E858A723A95F64009A02B5 /* Main.storyboard */,
 			);
 			path = EmojiDictionary;
 			sourceTree = "<group>";

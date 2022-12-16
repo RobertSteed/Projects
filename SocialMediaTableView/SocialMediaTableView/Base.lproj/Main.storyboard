@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H1y-wQ-LDa">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="I2U-5H-vaV">
+            <objects>
+                <tableViewController id="H1y-wQ-LDa" customClass="PostsTableViewController" customModule="SocialMediaTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="2Zs-v7-jnj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postIdentifier" rowHeight="100" id="mra-Y3-2Lr" customClass="PostsTableViewCell" customModule="SocialMediaTableView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mra-Y3-2Lr" id="lej-kL-gdw">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mce-4G-77f">
+                                            <rect key="frame" x="8" y="8" width="79" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVL-9Y-NHJ">
+                                            <rect key="frame" x="349" y="7.9999999999999982" width="36" height="20.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAv-yV-QuM">
+                                            <rect key="frame" x="20" y="37" width="365" height="20.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="OAv-yV-QuM" firstAttribute="leading" secondItem="lej-kL-gdw" secondAttribute="leadingMargin" id="7oM-OE-gVp"/>
+                                        <constraint firstItem="mce-4G-77f" firstAttribute="top" secondItem="lej-kL-gdw" secondAttribute="top" constant="8" id="A93-VP-kqL"/>
+                                        <constraint firstAttribute="trailing" secondItem="ZVL-9Y-NHJ" secondAttribute="trailing" constant="8" id="Mbv-0q-4Es"/>
+                                        <constraint firstItem="ZVL-9Y-NHJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mce-4G-77f" secondAttribute="trailing" constant="8" id="Qnu-YY-VWf"/>
+                                        <constraint firstAttribute="trailing" secondItem="OAv-yV-QuM" secondAttribute="trailing" constant="8" id="ROq-Df-1xd"/>
+                                        <constraint firstItem="OAv-yV-QuM" firstAttribute="top" secondItem="mce-4G-77f" secondAttribute="bottom" constant="8" id="UX5-PJ-YTR"/>
+                                        <constraint firstItem="mce-4G-77f" firstAttribute="leading" secondItem="lej-kL-gdw" secondAttribute="leading" constant="8" id="V0w-1B-6qD"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="OAv-yV-QuM" secondAttribute="bottom" constant="8" id="b3O-x8-Bzd"/>
+                                        <constraint firstItem="ZVL-9Y-NHJ" firstAttribute="top" secondItem="lej-kL-gdw" secondAttribute="top" constant="8" id="r9x-jR-r5N"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="ZVL-9Y-NHJ" id="lAM-5k-hKY"/>
+                                    <outlet property="messageLabel" destination="OAv-yV-QuM" id="tTs-dr-pav"/>
+                                    <outlet property="usernameLabel" destination="mce-4G-77f" id="yFl-Da-Edh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="H1y-wQ-LDa" id="GkY-bg-UBY"/>
+                            <outlet property="delegate" destination="H1y-wQ-LDa" id="Q6P-Mp-quP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="P7F-oG-3VR"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wFm-m5-kXE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301.52671755725191" y="7.746478873239437"/>
+        </scene>
+    </scenes>
+</document>
