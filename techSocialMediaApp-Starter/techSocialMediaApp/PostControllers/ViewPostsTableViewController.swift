@@ -71,6 +71,7 @@ class ViewPostsTableViewController: UITableViewController, CreatePostViewControl
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                //
             }
             
         }
@@ -94,6 +95,8 @@ class ViewPostsTableViewController: UITableViewController, CreatePostViewControl
     }
     
     
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostsTableViewCell
         
@@ -110,17 +113,8 @@ class ViewPostsTableViewController: UITableViewController, CreatePostViewControl
         //        }
         
         cell.updateCellInformation()
-        
-        
-        
         return cell
-        
     }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
-    }
-    
     
     @IBSegueAction func fromCreatePostToTableView(_ coder: NSCoder) -> CreatePostViewController? {
         var vc = CreatePostViewController(coder: coder)
@@ -171,7 +165,8 @@ class ViewPostsTableViewController: UITableViewController, CreatePostViewControl
         //
         
     }
-    
+
+
 
 
 
