@@ -15,6 +15,15 @@ protocol CreatePostViewControllerDelegate: AnyObject {
 
 class CreatePostViewController: UIViewController {
     
+    init?(coder: NSCoder, post: Post?) {
+        self.post = post
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     var currentUser = User.current
     
     var post: Post?
@@ -80,10 +89,19 @@ class CreatePostViewController: UIViewController {
             navigationController?.popViewController(animated: true)
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "editPosts" else { return }
+        
+        let body = bodyTextField.text ?? ""
+        let title = titleTextField.text ?? ""
+        
+        post = Post(postid: post!.postid, title: post!.title, body: post!.body, authorUserName: post!.authorUserName, authorUserId: post!.authorUserId, likes: post!.likes, userLiked: post!.userLiked, numComments: post!.numComments, createdDate: post!.createdDate)
+    }
 }
     
     
-    
+        
     
 
 

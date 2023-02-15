@@ -47,9 +47,9 @@ class DeleteEditPosts {
         
         var urlComponents = URLComponents(string: "\(API.url)/post")!
         
-        urlComponents.queryItems = [URLQueryItem(name: "userSecret", value: userSecret.description), URLQueryItem(name: "postid", value: "0")]
+        urlComponents.queryItems = [URLQueryItem(name: "userSecret", value: userSecret.description), URLQueryItem(name: "postid", value: String(postid))]
         //come back to this later
-        
+         
         var request = URLRequest(url: urlComponents.url!)
         
         request.httpMethod = "DELETE"

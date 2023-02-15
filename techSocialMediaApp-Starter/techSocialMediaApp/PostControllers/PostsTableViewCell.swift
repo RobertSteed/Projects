@@ -11,6 +11,7 @@ protocol PostsTableViewCellDelegate: AnyObject {
     func postsTableViewCell(_ Controller: PostsTableViewCell)
 }
 
+
 class PostsTableViewCell: UITableViewCell {
     
     
@@ -56,11 +57,13 @@ class PostsTableViewCell: UITableViewCell {
     
     
     @IBAction func editButtonTapped(_ sender: Any) {
+
     }
     
     
     @IBAction func deleteButtonTapped(_ sender: Any) {
-       
+        
+        
             delegate?.postsTableViewCell(self)
         }
         

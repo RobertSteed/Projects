@@ -489,7 +489,6 @@
                                                             <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=""/>
                                                             <connections>
                                                                 <action selector="editButtonTapped:" destination="uHt-Y2-blU" eventType="touchUpInside" id="v9T-u3-3wH"/>
-                                                                <segue destination="63x-N0-5IB" kind="show" id="eSd-3b-PgE"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -530,10 +529,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="63x-N0-5IB" kind="show" identifier="editPosts" id="chF-bW-FUN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gco-nc-eg1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6129" y="683"/>
+            <point key="canvasLocation" x="6106" y="771"/>
         </scene>
         <!--Create Post-->
         <scene sceneID="mNk-Bc-U7t">
@@ -609,7 +611,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cFa-l1-R75"/>
+        <segue reference="chF-bW-FUN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bubble.right.circle" catalog="system" width="128" height="123"/>
