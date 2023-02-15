@@ -69,6 +69,7 @@ class ViewPostsTableViewController: UITableViewController, CreatePostViewControl
 
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                //
             }
             
         }
@@ -92,30 +93,17 @@ class ViewPostsTableViewController: UITableViewController, CreatePostViewControl
     }
     
     
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostsTableViewCell
                
         
         cell.post = posts[indexPath.row]
-//        let post = posts[indexPath.row]
-//        cell.posts = post
-//        cell.didTapDelete = {
-////            DeleteEditPosts().userDeletePost(postid: post.postid, userSecret: currentUser!.secret)
-//            // update your tableView's data (`posts`)
-//            // update the tableView UI
-//        }
-        
         cell.updateCellInformation()
  
-        
-       
         return cell
-        
     }
-    
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 200
-//    }
     
     
     @IBSegueAction func fromCreatePostToTableView(_ coder: NSCoder) -> CreatePostViewController? {
@@ -155,9 +143,6 @@ class ViewPostsTableViewController: UITableViewController, CreatePostViewControl
             print (error)
         }
     }
-
-//
-    
 }
 
 

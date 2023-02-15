@@ -90,9 +90,6 @@ class PostsTableViewCell: UITableViewCell {
         
     }
     
-    
- 
-
 }
 
 
