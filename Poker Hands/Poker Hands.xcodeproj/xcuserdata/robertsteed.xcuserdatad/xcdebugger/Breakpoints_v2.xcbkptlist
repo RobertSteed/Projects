@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "047B9A8B-1BC8-467E-9319-5C53A8015B8B"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "308E443B-9944-4DC5-AF8F-58A4B8E9433C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Poker Hands/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "testing()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "14150410-E4E3-4A49-8B25-4704008CB181"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Poker Hands/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "checkHand(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0AE45A6A-2B31-4EA4-8D41-06A6A0707C37"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Poker Hands/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "checkHand(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0AE45A6A-2B31-4EA4-8D41-06A6A0707C37 - 366c04e119298ed9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Poker_Hands.ViewController.checkHand(Swift.Array&lt;Poker_Hands.Card&gt;) -&gt; Swift.String"
+                  moduleName = "Poker Hands"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robertsteed/Desktop/Swift%20Projects/Poker%20Hands/Poker%20Hands/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "2980">
+               </Location>
+               <Location
+                  uuid = "0AE45A6A-2B31-4EA4-8D41-06A6A0707C37 - b0276c17e0dffdd0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #6 (Swift.Int) -&gt; Swift.Int in Poker_Hands.ViewController.checkHand(Swift.Array&lt;Poker_Hands.Card&gt;) -&gt; Swift.String"
+                  moduleName = "Poker Hands"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robertsteed/Desktop/Swift%20Projects/Poker%20Hands/Poker%20Hands/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -10,10 +10,12 @@ import UIKit
 protocol EditUserInformationViewControllerDelegate: AnyObject {
     func editUserInformationViewController(_ Controller: EditUserInformationViewController, didSelect user: User)
 }
+
+
 class EditUserInformationViewController: UIViewController {
     
     var currentUser = User.current
-    let userProfileInformation = UserProfileTableViewController()
+    let userProfileInformation = UserProfileViewController()
     let userAPIRequestChange = UserInfomationClass()
     weak var delegate: EditUserInformationViewControllerDelegate?
     
@@ -46,26 +48,7 @@ class EditUserInformationViewController: UIViewController {
         
         navigationController?.popViewController(animated: true)
     }
+    
+    
+    
 }
-    
-    
-//
-//    func updateSaveButton() {
-//        if let user = currentUser {
-//            delegate?.editUserInformationViewController(self, didSelect: user)
-//        }
-//
-//    }
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard segue.identifier == "userInformationEditUnwind" else { return }
-//
-//
-//      updateSaveButton()
-//    }
-//
-   
-    
-    
-    
-

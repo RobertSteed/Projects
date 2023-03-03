@@ -24,11 +24,11 @@ class DeleteEditPosts {
         var request = URLRequest(url: URL(string: "\(API.url)/editPost")!)
         
         // Put the credentials in JSON format
-        let body: [String: Any] = ["userSecret": User.current?.secret.uuidString, "post": ["title": title, "postid": "0", "body" : body]]
+        let body: [String: Any] = ["userSecret": User.current?.secret.uuidString, "post": ["title": title, "postid": String(postid), "body" : body]]
         
         // Add json data to the body of the request. Also clarify that this is a POST request
         request.httpBody = try JSONSerialization.data(withJSONObject: body, options: .prettyPrinted)
-        request.httpMethod = "EDIT"
+        request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         // Make the request

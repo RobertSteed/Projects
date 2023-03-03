@@ -9,6 +9,7 @@ import UIKit
 
 protocol PostsTableViewCellDelegate: AnyObject {
     func postsTableViewCell(_ Controller: PostsTableViewCell)
+    func editPosts(_ Controller: PostsTableViewCell)
 }
 
 
@@ -57,20 +58,14 @@ class PostsTableViewCell: UITableViewCell {
     
     
     @IBAction func editButtonTapped(_ sender: Any) {
-
+        delegate?.editPosts(self)
     }
     
     
     @IBAction func deleteButtonTapped(_ sender: Any) {
-        
-        
             delegate?.postsTableViewCell(self)
         }
         
-    
-    
-    
-    
     
     func updateCellInformation() {
         

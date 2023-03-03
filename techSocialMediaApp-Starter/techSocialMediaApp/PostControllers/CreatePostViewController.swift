@@ -41,39 +41,38 @@ class CreatePostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        if let post = post {
+            bodyTextField.text = post.body
+            titleTextField.text = post.title
+        }
     }
     
+//        func editingPosts() async {
+//            let body = bodyTextField.text ?? ""
+//            let title = titleTextField.text ?? ""
+//            Task {
+//                try! await editingPostsOnServer.userEditPost(postid: post!.postid, title: title, body: body)
+//            }
+//        }
     
-    
-    
-    //
-    //    func editingPosts() async {
-    //        let body = bodyTextField.text ?? ""
-    //        let title = titleTextField.text ?? ""
-    //        Task {
-    //            try! await editingPostsOnServer.userEditPost(postid: title: body:)
-    //        }
-    //    }
-    //
     
     
     @IBAction func postButtonTapped(_ sender: Any) {
         let body = bodyTextField.text ?? ""
         let title = titleTextField.text ?? ""
         Task {
-            
-            
-            if let post = post {
-                //edit the post
-                var editedPost = post
+            if var editedPost = post {
                 editedPost.body = body
                 editedPost.title = title
                 
-                DispatchQueue.main.async {
-                    self.delegate?.postEdited(editedPost)
+                Task {
+//                    await editingPosts()
+                    try? await editingPostsOnServer.userEditPost(postid: post!.postid, title: title, body: body)
+                    DispatchQueue.main.async {
+                        self.delegate?.postEdited(editedPost)
+                    }
                 }
+               
                 
             } else {
                 //new post
@@ -89,6 +88,9 @@ class CreatePostViewController: UIViewController {
             navigationController?.popViewController(animated: true)
         }
     }
+    
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "editPosts" else { return }

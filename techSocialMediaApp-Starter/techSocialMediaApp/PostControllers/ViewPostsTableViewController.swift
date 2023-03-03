@@ -9,33 +9,13 @@ import UIKit
 
 class ViewPostsTableViewController: UITableViewController, CreatePostViewControllerDelegate, PostsTableViewCellDelegate {
     
-    func postEdited(_ post: Post) {
-        Task {
-            await gettingPostInformation()
-        }
-    }
     
-    func postCreated(_ post: Post) {
-        Task {
-            await gettingPostInformation()
-        }
-    }
-    
-    func postsTableViewCell(_ controller: PostsTableViewCell) {
-        Task {
-            await deletingPosts(postid: controller.post.postid)
-            deletePost(at: tableView.indexPath(for: controller)!)
-        }
+    func editPosts(_ Controller: PostsTableViewCell) {
+        performSegue(withIdentifier: "editPosts", sender: Controller)
     }
     
     
-    
-    //    func postsTableViewCell(_ Controller: PostsTableViewCell, didSelect post: Post) {
-    //        self.posts = post
-    //        updateCellInformation()
-    //    }
-    
-    
+
     var posts = [Post] ()
     var postInformationAPI = PostInformation()
     var currentUser = User.current
@@ -49,34 +29,21 @@ class ViewPostsTableViewController: UITableViewController, CreatePostViewControl
     }
     
     
-    //    override func viewDidLoad() {
-    //        super.viewDidLoad()
-    //
-    //        Task
-    //        {
-    //           await gettingPostInformation()
-    //            await gettingLikesInformation()
-    //            tableView.reloadData()
-    //        }
-    //
-    //
-    //    }
-    //
+    
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         Task
         {
             await gettingPostInformation()
-            
+
             DispatchQueue.main.async {
                 self.tableView.reloadData()
                 //
             }
-            
         }
-        
-        
     }
     
     
@@ -87,6 +54,10 @@ class ViewPostsTableViewController: UITableViewController, CreatePostViewControl
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
+    
+    
+    
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -104,36 +75,64 @@ class ViewPostsTableViewController: UITableViewController, CreatePostViewControl
         cell.post = posts[indexPath.row]
         cell.delegate = self
         
-        //        let post = posts[indexPath.row]
-        //        cell.posts = post
-        //        cell.didTapDelete = {
-        ////            DeleteEditPosts().userDeletePost(postid: post.postid, userSecret: currentUser!.secret)
-        //            // update your tableView's data (`posts`)
-        //            // update the tableView UI
-        //        }
-        
+        //      
         cell.updateCellInformation()
         return cell
     }
     
-    @IBSegueAction func fromCreatePostToTableView(_ coder: NSCoder) -> CreatePostViewController? {
-        var vc = CreatePostViewController(coder: coder)
+    
+    
+    
+    @IBSegueAction func createNewPost(_ coder: NSCoder) -> CreatePostViewController? {
+        var vc = CreatePostViewController(coder: coder, post: nil)
         vc?.delegate = self
         return vc!
     }
     
     
-    @IBSegueAction func fromEditCreatePostToTableView(_ coder: NSCoder, sender: Any?) -> CreatePostViewController? {
+    
+    
+    
+    @IBSegueAction func editPostsSegue(_ coder: NSCoder, sender: Any?) -> CreatePostViewController? {
         if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
+            
             let postToEdit = posts[indexPath.row]
-            return CreatePostViewController(coder: coder, post: nil)
+            var vc = CreatePostViewController(coder: coder, post: postToEdit)
+            vc?.delegate = self
+            return vc   
             
         } else {
             return CreatePostViewController(coder: coder, post: nil)
         }
-        
     }
+    
+    
+    
+    func postEdited(_ editedPost: Post) {
+
+        for (index, post) in posts.enumerated() {
+            if editedPost.postid == post.postid {
+                posts[index] = editedPost
+                tableView.reloadData()
+            }
+           
+        }
         
+//        Task {
+//            await gettingPostInformation()
+//        }
+    }
+    
+    
+    
+    func postCreated(_ post: Post) {
+        Task {
+            await gettingPostInformation()
+        }
+    }
+    
+    
+    
         func gettingPostInformation() async {
             do {
                 posts = try await postInformationAPI.userGetPostingInformation(pageNumber: 0, userSecret: currentUser!.secret)
@@ -142,14 +141,26 @@ class ViewPostsTableViewController: UITableViewController, CreatePostViewControl
             catch {
                 print (error.localizedDescription)
             }
-            
-            
         }
+    
+    
+    
+    func postsTableViewCell(_ controller: PostsTableViewCell) {
+        Task {
+            await deletingPosts(postid: controller.post.postid)
+            deletePost(at: tableView.indexPath(for: controller)!)
+        }
+    }
+    
+    
+    
         
         func deletePost(at indexPath: IndexPath) {
             posts.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+    
+    
         
         
         func deletingPosts(postid: Int) async {

@@ -43,7 +43,7 @@ class PostInformation {
         let session = URLSession.shared
         var urlComponents = URLComponents(string: "\(API.url)/posts")!
         
-        urlComponents.queryItems = [URLQueryItem(name: "userSecret", value: userSecret.description), URLQueryItem(name: "pageNumber", value: "0")]
+        urlComponents.queryItems = [URLQueryItem(name: "userSecret", value: userSecret.description), URLQueryItem(name: "pageNumber", value: String(pageNumber!))]
         //come back to this later
         
         var request = URLRequest(url: urlComponents.url!)
@@ -74,7 +74,7 @@ class PostInformation {
         let session = URLSession.shared
         var urlComponents = URLComponents(string: "\(API.url)/userPosts")!
         
-        urlComponents.queryItems = [URLQueryItem(name: "userSecret", value: userSecret.description), URLQueryItem(name: "pageNumber", value: "0"), URLQueryItem(name: "userUUID", value: userUUID.description)]
+        urlComponents.queryItems = [URLQueryItem(name: "userSecret", value: userSecret.description), URLQueryItem(name: "pageNumber", value: String(pageNumber!)), URLQueryItem(name: "userUUID", value: userUUID.description)]
         //come back to this later
         
         var request = URLRequest(url: urlComponents.url!)
