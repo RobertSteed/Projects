@@ -11,15 +11,27 @@ import UIKit
 
 class DisplayingUsersTableViewController: UITableViewController {
     
-    var currentUser = User.current
+    var user = User(gender: "", name: "", location: UserLocation.init(street: LocationStreet(number: 0, name: ""), city: ""), email: "", login: "", dob: UserDOB(date: "", age: 0), phone: "", id: UserID(name: "", value: ""), picture: "", registered: UserRegistration(date: "", age: 0), nationality: "")
     var userInformation = UserInformationClass()
     var users = [User] ()
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        Task {
-//           await gettingUserInformation()
-//        }
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = UITableView.automaticDimension
+    }
+    
+    init?(coder: NSCoder, users: [User]?) {
+        self.users = users!
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+//        fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: - Table view data source
@@ -35,8 +47,11 @@ class DisplayingUsersTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath)
-        let user = users[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! UserTableViewCell
+        
+        cell.user = users[indexPath.row]
+        cell.update(with: user)
+//        let user = users[indexPath.row]
         
         
         
@@ -48,14 +63,21 @@ class DisplayingUsersTableViewController: UITableViewController {
     }
 
     
-//    func gettingUserInformation() async {
-//        do {
-//            try await currentUser = userInformation.getUserInformation(gender: currentUser?.gender ?? "", name: currentUser?.name ?? "", location: currentUser?.location ?? "", email: currentUser?.email ?? "", login: currentUser?.login ?? "", dob: currentUser?.dob ?? "", phone: currentUser?.phone ?? "", id: currentUser?.id ?? "", picture: currentUser?.picture ?? "", registered: currentUser?.registered ?? "", nationality: currentUser?.nationality ?? "")
-//        }
-//        catch {
-//            print ( error.localizedDescription)
-//        }
+//    @IBSegueAction func sendAPIUserInformation(_ coder: NSCoder, sender: Any?) -> SettingsViewController? { if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
+//        let passedUser = users[indexPath.row]
+//        return SettingsViewController(coder: coder, user: passedUser)
 //    }
+//        return SettingsViewController(coder: coder, user: nil)
+//    }
+//
+//    @IBSegueAction func sendAPIUserInformation(_ coder: NSCoder, sender: Any?) -> SettingsViewController? {
+//        if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
+//            let sentUser = users[indexPath.row]
+//            return SettingsViewController(coder: coder, currentUser: sentUser)
+//        }
+//        return SettingsViewController(coder: coder, currentUser: nil)
+//    }
+////
     
 
     /*

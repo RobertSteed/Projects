@@ -17,7 +17,7 @@ class UserInformationClass {
         
         
         urlComponents?.queryItems = query.map { URLQueryItem(name: $0.key, value: $0.value) }
-        
+        print(urlComponents?.url)
         let (data, response) = try await URLSession.shared.data(from: (urlComponents?.url!)!)
         
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
@@ -25,9 +25,15 @@ class UserInformationClass {
         }
         
         let decoder = JSONDecoder()
-        let user = try decoder.decode([User].self, from: data)
+        print(urlComponents!.url!)
+        print(String(data: data, encoding: .utf8)!)
         
-        return user
+        struct Result: Codable {
+            var results: [User]
+        }
+        let result = try decoder.decode(Result.self, from: data)
+        
+        return result.results
     }
     
     

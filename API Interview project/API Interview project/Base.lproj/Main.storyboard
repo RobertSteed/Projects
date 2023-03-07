@@ -182,7 +182,6 @@
                         <barButtonItem key="rightBarButtonItem" title="Save" id="J4b-EQ-16W">
                             <connections>
                                 <action selector="saveButtonTapped:" destination="e3y-DG-Z1r" id="rXv-f3-Byv"/>
-                                <segue destination="WgA-oh-hoR" kind="show" id="iPo-kY-6n6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -197,6 +196,7 @@
                         <outlet property="phoneSwitch" destination="tOJ-CY-QDs" id="SxV-Iw-oLZ"/>
                         <outlet property="registeredSwitch" destination="J6d-Nu-6gm" id="2bV-yc-REn"/>
                         <outlet property="saveButton" destination="J4b-EQ-16W" id="w2O-qd-pdz"/>
+                        <segue destination="WgA-oh-hoR" kind="show" identifier="saveUnwind" destinationCreationSelector="sendAPIUserInformation:sender:" id="Aw0-DO-dLQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BKH-c9-vyq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -322,7 +322,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="e3y-DG-Z1r" kind="relationship" relationship="rootViewController" id="Osj-CV-daC"/>
+                        <segue destination="e3y-DG-Z1r" kind="relationship" relationship="rootViewController" destinationCreationSelector="sendAPIUserInformation:sender:" id="Osj-CV-daC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eoG-i1-ulE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

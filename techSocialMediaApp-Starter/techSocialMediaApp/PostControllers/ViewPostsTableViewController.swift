@@ -23,7 +23,7 @@ class ViewPostsTableViewController: UITableViewController, CreatePostViewControl
     var delete = DeleteEditPosts()
     
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = UITableView.automaticDimension
     }

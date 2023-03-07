@@ -8,5 +8,5 @@
 import Foundation
 
 struct API {
-    static var url = "https://randomuser.me/api"
+    static var url = "https://randomuser.me/api/"
 }

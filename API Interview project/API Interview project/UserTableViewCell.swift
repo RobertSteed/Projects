@@ -9,6 +9,7 @@ import UIKit
 
 class UserTableViewCell: UITableViewCell {
     
+    var user = User(gender: "", name: "", location: UserLocation.init(street: LocationStreet(number: 0, name: ""), city: ""), email: "", login: "", dob: UserDOB(date: "", age: 0), phone: "", id: UserID(name: "", value: ""), picture: "", registered: UserRegistration(date: "", age: 0), nationality: "")
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
@@ -37,14 +38,15 @@ class UserTableViewCell: UITableViewCell {
     func update(with user: User) {
         nameLabel.text = user.name
         genderLabel.text = user.gender
-        locationLabel.text = user.location
+        locationLabel.text = user.location.city
         emailLabel.text = user.email
-        loginLabel.text = user.login
-        registeredLabel.text = user.registered
-        dobLabel.text = user.dob
+//        loginLabel.text = user.login
+        registeredLabel.text = user.registered.date
+        dobLabel.text = user.dob.date
         phoneLabel.text = user.phone
-        idLabel.text = user.id
+        idLabel.text = user.id?.name ?? ""
         nationalityLabel.text = user.nationality
+        
     }
 
 }

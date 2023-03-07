@@ -9,9 +9,10 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    var currentUser = User.current
+    var user: User?
+    
     var userInformation = UserInformationClass()
-
+    var users = [User] ()
     
     
     @IBOutlet weak var genderSwitch: UISwitch!
@@ -30,45 +31,66 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
     }
     
+
+    
     @IBAction func saveButtonTapped(_ sender: Any) {
+        Task {
+            await fetchAndHandleUser()
+            performSegue(withIdentifier: "saveUnwind", sender: nil)
+        }
+        
     }
     
     
     func fetchAndHandleUser() async {
-        var queryString = ""
+        var queryValues = [String]()
         if genderSwitch.isOn {
-            queryString += "gender,"
-        } else if locationSwitch.isOn {
-            queryString += "location,"
-        } else if emailSwitch.isOn {
-            queryString += "email,"
-        } else if registeredSwitch.isOn {
-            queryString += "registered,"
-        } else if dobSwitch.isOn {
-            queryString += "dob,"
-        } else if phoneSwitch.isOn {
-            queryString += "phone,"
-        } else if idSwitch.isOn {
-            queryString += "id,"
-        } else if nationalitySwitch.isOn {
-            queryString += "nationality"
+            queryValues.append("gender")
+        }
+        if locationSwitch.isOn {
+            queryValues.append("location")
+        }
+        if emailSwitch.isOn {
+            queryValues.append("email")
+        }
+        if registeredSwitch.isOn {
+            queryValues.append("registered")
+        }
+        if dobSwitch.isOn {
+            queryValues.append("dob")
+        }
+        if phoneSwitch.isOn {
+            queryValues.append("phone")
+        }
+        if idSwitch.isOn {
+            queryValues.append("id")
+        }
+        if nationalitySwitch.isOn {
+            queryValues.append("nationality")
         }
 //         else if loginSwitch.isOn {
 //            queryString += "login,"
 //        }
         
         let query = [
-            "inc": queryString
+            "inc": queryValues.joined(separator: ","),
+            "results": numberOfUsersTextField.text ?? "0"
+            
         ]
         
         do {
-            try await currentUser = userInformation.fetchItems(matching: query: query)
+            try await users = userInformation.fetchItems(matching: query)
+        }
+        catch {
+            print(error)
+            
         }
     }
 
     
     
     @IBAction func numberOfUsersTextField(_ sender: Any) {
+        
     }
     
     
@@ -104,7 +126,23 @@ class SettingsViewController: UIViewController {
     @IBAction func nationalitySwitch(_ sender: Any) {
         
     }
-    
-    
+//    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "saveUnwind" else { return }
+        
+//        Task {
+//            await fetchAndHandleUser()
+//            performSegue(withIdentifier: "saveUnwind", sender: nil)
+//        }
+//
+    }
+
+    @IBSegueAction func sendAPIUserInformation(_ coder: NSCoder, sender: Any?) -> DisplayingUsersTableViewController? {
+        let passedUser = Int(numberOfUsersTextField.text!) ?? 0
+        print(users.count)
+        let users = Array(users[0..<passedUser])
+        return DisplayingUsersTableViewController(coder: coder, users: users)
+    }
+        
     
 }
