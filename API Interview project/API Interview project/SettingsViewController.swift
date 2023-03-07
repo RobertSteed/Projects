@@ -68,6 +68,8 @@ class SettingsViewController: UIViewController {
         if nationalitySwitch.isOn {
             queryValues.append("nationality")
         }
+        queryValues.append("picture")
+        queryValues.append("name")
 //         else if loginSwitch.isOn {
 //            queryString += "login,"
 //        }
@@ -128,21 +130,19 @@ class SettingsViewController: UIViewController {
     }
 //    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "saveUnwind" else { return }
-        
-//        Task {
-//            await fetchAndHandleUser()
-//            performSegue(withIdentifier: "saveUnwind", sender: nil)
-//        }
-//
+        guard segue.identifier == "saveUnwind",
+        let vc = segue.destination as? DisplayingUsersTableViewController
+        else { return }
+        vc.users = users
+
     }
 
-    @IBSegueAction func sendAPIUserInformation(_ coder: NSCoder, sender: Any?) -> DisplayingUsersTableViewController? {
-        let passedUser = Int(numberOfUsersTextField.text!) ?? 0
-        print(users.count)
-        let users = Array(users[0..<passedUser])
-        return DisplayingUsersTableViewController(coder: coder, users: users)
-    }
+//    @IBSegueAction func sendAPIUserInformation(_ coder: NSCoder, sender: Any?) -> DisplayingUsersTableViewController? {
+//        let passedUser = Int(numberOfUsersTextField.text!) ?? 0
+//        print(users.count)
+//        let users = Array(users[0..<passedUser])
+//        return DisplayingUsersTableViewController(coder: coder, users: users)
+//    }
         
     
 }

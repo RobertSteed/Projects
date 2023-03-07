@@ -11,17 +11,15 @@ import UIKit
 
 struct User: Decodable, Encodable {
     var gender: String
-    var name: String?
-//    var address: String {
-//        location.city + location.street
-//    }
+    var name: Name
+
     var location: UserLocation
     var email: String?
     var login: String?
     var dob: UserDOB
     var phone: String?
     var id: UserID?
-    var picture: String?
+    var picture: Picture
     var registered: UserRegistration
     var nationality: String?
 //    var results: [User]
@@ -59,4 +57,14 @@ struct UserRegistration: Codable {
 struct UserID: Codable {
     var name: String?
     var value: String?
+}
+
+struct Picture: Codable {
+    var large: String?
+    var medium: String?
+    var thumbnail: String?
+}
+struct Name: Codable {
+    var first: String
+    var last: String
 }

@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		750D881429B7930B00D2B769 /* Outdoor_GuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D881329B7930B00D2B769 /* Outdoor_GuideApp.swift */; };
+		750D881629B7930B00D2B769 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D881529B7930B00D2B769 /* ContentView.swift */; };
+		750D881829B7930D00D2B769 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 750D881729B7930D00D2B769 /* Assets.xcassets */; };
+		750D881B29B7930D00D2B769 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 750D881A29B7930D00D2B769 /* Preview Assets.xcassets */; };
+		750D882529B7930D00D2B769 /* Outdoor_GuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D882429B7930D00D2B769 /* Outdoor_GuideTests.swift */; };
+		750D882F29B7930D00D2B769 /* Outdoor_GuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D882E29B7930D00D2B769 /* Outdoor_GuideUITests.swift */; };
+		750D883129B7930D00D2B769 /* Outdoor_GuideUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D883029B7930D00D2B769 /* Outdoor_GuideUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		750D882129B7930D00D2B769 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 750D880829B7930B00D2B769 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 750D880F29B7930B00D2B769;
+			remoteInfo = "Outdoor Guide";
+		};
+		750D882B29B7930D00D2B769 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 750D880829B7930B00D2B769 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 750D880F29B7930B00D2B769;
+			remoteInfo = "Outdoor Guide";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		750D881029B7930B00D2B769 /* Outdoor Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Outdoor Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		750D881329B7930B00D2B769 /* Outdoor_GuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outdoor_GuideApp.swift; sourceTree = "<group>"; };
+		750D881529B7930B00D2B769 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		750D881729B7930D00D2B769 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		750D881A29B7930D00D2B769 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		750D882029B7930D00D2B769 /* Outdoor GuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Outdoor GuideTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		750D882429B7930D00D2B769 /* Outdoor_GuideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outdoor_GuideTests.swift; sourceTree = "<group>"; };
+		750D882A29B7930D00D2B769 /* Outdoor GuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Outdoor GuideUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		750D882E29B7930D00D2B769 /* Outdoor_GuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outdoor_GuideUITests.swift; sourceTree = "<group>"; };
+		750D883029B7930D00D2B769 /* Outdoor_GuideUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outdoor_GuideUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		750D880D29B7930B00D2B769 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		750D881D29B7930D00D2B769 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		750D882729B7930D00D2B769 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		750D880729B7930B00D2B769 = {
+			isa = PBXGroup;
+			children = (
+				750D881229B7930B00D2B769 /* Outdoor Guide */,
+				750D882329B7930D00D2B769 /* Outdoor GuideTests */,
+				750D882D29B7930D00D2B769 /* Outdoor GuideUITests */,
+				750D881129B7930B00D2B769 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		750D881129B7930B00D2B769 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				750D881029B7930B00D2B769 /* Outdoor Guide.app */,
+				750D882029B7930D00D2B769 /* Outdoor GuideTests.xctest */,
+				750D882A29B7930D00D2B769 /* Outdoor GuideUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		750D881229B7930B00D2B769 /* Outdoor Guide */ = {
+			isa = PBXGroup;
+			children = (
+				750D881329B7930B00D2B769 /* Outdoor_GuideApp.swift */,
+				750D881529B7930B00D2B769 /* ContentView.swift */,
+				750D881729B7930D00D2B769 /* Assets.xcassets */,
+				750D881929B7930D00D2B769 /* Preview Content */,
+			);
+			path = "Outdoor Guide";
+			sourceTree = "<group>";
+		};
+		750D881929B7930D00D2B769 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				750D881A29B7930D00D2B769 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		750D882329B7930D00D2B769 /* Outdoor GuideTests */ = {
+			isa = PBXGroup;
+			children = (
+				750D882429B7930D00D2B769 /* Outdoor_GuideTests.swift */,
+			);
+			path = "Outdoor GuideTests";
+			sourceTree = "<group>";
+		};
+		750D882D29B7930D00D2B769 /* Outdoor GuideUITests */ = {
+			isa = PBXGroup;
+			children = (
+				750D882E29B7930D00D2B769 /* Outdoor_GuideUITests.swift */,
+				750D883029B7930D00D2B769 /* Outdoor_GuideUITestsLaunchTests.swift */,
+			);
+			path = "Outdoor GuideUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		750D880F29B7930B00D2B769 /* Outdoor Guide */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 750D883429B7930D00D2B769 /* Build configuration list for PBXNativeTarget "Outdoor Guide" */;
+			buildPhases = (
+				750D880C29B7930B00D2B769 /* Sources */,
+				750D880D29B7930B00D2B769 /* Frameworks */,
+				750D880E29B7930B00D2B769 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Outdoor Guide";
+			productName = "Outdoor Guide";
+			productReference = 750D881029B7930B00D2B769 /* Outdoor Guide.app */;
+			productType = "com.apple.product-type.application";
+		};
+		750D881F29B7930D00D2B769 /* Outdoor GuideTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 750D883729B7930D00D2B769 /* Build configuration list for PBXNativeTarget "Outdoor GuideTests" */;
+			buildPhases = (
+				750D881C29B7930D00D2B769 /* Sources */,
+				750D881D29B7930D00D2B769 /* Frameworks */,
+				750D881E29B7930D00D2B769 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				750D882229B7930D00D2B769 /* PBXTargetDependency */,
+			);
+			name = "Outdoor GuideTests";
+			productName = "Outdoor GuideTests";
+			productReference = 750D882029B7930D00D2B769 /* Outdoor GuideTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		750D882929B7930D00D2B769 /* Outdoor GuideUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 750D883A29B7930D00D2B769 /* Build configuration list for PBXNativeTarget "Outdoor GuideUITests" */;
+			buildPhases = (
+				750D882629B7930D00D2B769 /* Sources */,
+				750D882729B7930D00D2B769 /* Frameworks */,
+				750D882829B7930D00D2B769 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				750D882C29B7930D00D2B769 /* PBXTargetDependency */,
+			);
+			name = "Outdoor GuideUITests";
+			productName = "Outdoor GuideUITests";
+			productReference = 750D882A29B7930D00D2B769 /* Outdoor GuideUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		750D880829B7930B00D2B769 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					750D880F29B7930B00D2B769 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					750D881F29B7930D00D2B769 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 750D880F29B7930B00D2B769;
+					};
+					750D882929B7930D00D2B769 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 750D880F29B7930B00D2B769;
+					};
+				};
+			};
+			buildConfigurationList = 750D880B29B7930B00D2B769 /* Build configuration list for PBXProject "Outdoor Guide" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 750D880729B7930B00D2B769;
+			productRefGroup = 750D881129B7930B00D2B769 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				750D880F29B7930B00D2B769 /* Outdoor Guide */,
+				750D881F29B7930D00D2B769 /* Outdoor GuideTests */,
+				750D882929B7930D00D2B769 /* Outdoor GuideUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		750D880E29B7930B00D2B769 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				750D881B29B7930D00D2B769 /* Preview Assets.xcassets in Resources */,
+				750D881829B7930D00D2B769 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		750D881E29B7930D00D2B769 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		750D882829B7930D00D2B769 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		750D880C29B7930B00D2B769 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				750D881629B7930B00D2B769 /* ContentView.swift in Sources */,
+				750D881429B7930B00D2B769 /* Outdoor_GuideApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		750D881C29B7930D00D2B769 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				750D882529B7930D00D2B769 /* Outdoor_GuideTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		750D882629B7930D00D2B769 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				750D883129B7930D00D2B769 /* Outdoor_GuideUITestsLaunchTests.swift in Sources */,
+				750D882F29B7930D00D2B769 /* Outdoor_GuideUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		750D882229B7930D00D2B769 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 750D880F29B7930B00D2B769 /* Outdoor Guide */;
+			targetProxy = 750D882129B7930D00D2B769 /* PBXContainerItemProxy */;
+		};
+		750D882C29B7930D00D2B769 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 750D880F29B7930B00D2B769 /* Outdoor Guide */;
+			targetProxy = 750D882B29B7930D00D2B769 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		750D883229B7930D00D2B769 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		750D883329B7930D00D2B769 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		750D883529B7930D00D2B769 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Outdoor Guide/Preview Content\"";
+				DEVELOPMENT_TEAM = N93UG27R7L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RobertSteed.Outdoor-Guide";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		750D883629B7930D00D2B769 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Outdoor Guide/Preview Content\"";
+				DEVELOPMENT_TEAM = N93UG27R7L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RobertSteed.Outdoor-Guide";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		750D883829B7930D00D2B769 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N93UG27R7L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RobertSteed.Outdoor-GuideTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Outdoor Guide.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Outdoor Guide";
+			};
+			name = Debug;
+		};
+		750D883929B7930D00D2B769 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N93UG27R7L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RobertSteed.Outdoor-GuideTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Outdoor Guide.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Outdoor Guide";
+			};
+			name = Release;
+		};
+		750D883B29B7930D00D2B769 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N93UG27R7L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RobertSteed.Outdoor-GuideUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Outdoor Guide";
+			};
+			name = Debug;
+		};
+		750D883C29B7930D00D2B769 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N93UG27R7L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RobertSteed.Outdoor-GuideUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Outdoor Guide";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		750D880B29B7930B00D2B769 /* Build configuration list for PBXProject "Outdoor Guide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				750D883229B7930D00D2B769 /* Debug */,
+				750D883329B7930D00D2B769 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		750D883429B7930D00D2B769 /* Build configuration list for PBXNativeTarget "Outdoor Guide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				750D883529B7930D00D2B769 /* Debug */,
+				750D883629B7930D00D2B769 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		750D883729B7930D00D2B769 /* Build configuration list for PBXNativeTarget "Outdoor GuideTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				750D883829B7930D00D2B769 /* Debug */,
+				750D883929B7930D00D2B769 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		750D883A29B7930D00D2B769 /* Build configuration list for PBXNativeTarget "Outdoor GuideUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				750D883B29B7930D00D2B769 /* Debug */,
+				750D883C29B7930D00D2B769 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 750D880829B7930B00D2B769 /* Project object */;
+}

@@ -9,7 +9,7 @@ import UIKit
 
 class UserTableViewCell: UITableViewCell {
     
-    var user = User(gender: "", name: "", location: UserLocation.init(street: LocationStreet(number: 0, name: ""), city: ""), email: "", login: "", dob: UserDOB(date: "", age: 0), phone: "", id: UserID(name: "", value: ""), picture: "", registered: UserRegistration(date: "", age: 0), nationality: "")
+    var user: User?
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
@@ -21,7 +21,7 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var nationalityLabel: UILabel!
-    
+    @IBOutlet weak var userImageView: UIImageView!
     
     
     override func awakeFromNib() {
@@ -35,18 +35,32 @@ class UserTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func update(with user: User) {
-        nameLabel.text = user.name
-        genderLabel.text = user.gender
-        locationLabel.text = user.location.city
-        emailLabel.text = user.email
+    func update() {
+        nameLabel.text = user?.name.first
+        genderLabel.text = user?.gender
+        locationLabel.text = user?.location.city
+        emailLabel.text = user?.email
 //        loginLabel.text = user.login
-        registeredLabel.text = user.registered.date
-        dobLabel.text = user.dob.date
-        phoneLabel.text = user.phone
-        idLabel.text = user.id?.name ?? ""
-        nationalityLabel.text = user.nationality
+        registeredLabel.text = user?.registered.date
+        dobLabel.text = user?.dob.date
+        phoneLabel.text = user?.phone
+        idLabel.text = user?.id?.name
+        nationalityLabel.text = user?.nationality
         
+        if let url = URL(string: user?.picture.large ?? "") {
+          URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
+            guard let data = data else { return }
+            DispatchQueue.main.async {
+              self?.userImageView.image = UIImage(data: data)
+            }
+          }.resume()
+        }
+       
     }
+//    func configure() {
+//      
+//     
+//     
+//      }
 
 }

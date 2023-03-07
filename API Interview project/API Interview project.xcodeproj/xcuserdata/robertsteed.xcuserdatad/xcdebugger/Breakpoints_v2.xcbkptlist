@@ -32,8 +32,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "143"
             endingLineNumber = "143"
-            landmarkName = "sendAPIUserInformation(_:sender:)"
-            landmarkType = "7">
+            landmarkName = "SettingsViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -48,7 +48,23 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "144"
             endingLineNumber = "144"
-            landmarkName = "sendAPIUserInformation(_:sender:)"
+            landmarkName = "SettingsViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0089778A-452C-4BC2-B7FD-169F8201E05F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "API Interview project/UserTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "update()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

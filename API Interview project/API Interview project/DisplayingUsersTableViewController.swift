@@ -11,7 +11,7 @@ import UIKit
 
 class DisplayingUsersTableViewController: UITableViewController {
     
-    var user = User(gender: "", name: "", location: UserLocation.init(street: LocationStreet(number: 0, name: ""), city: ""), email: "", login: "", dob: UserDOB(date: "", age: 0), phone: "", id: UserID(name: "", value: ""), picture: "", registered: UserRegistration(date: "", age: 0), nationality: "")
+    
     var userInformation = UserInformationClass()
     var users = [User] ()
     
@@ -50,7 +50,9 @@ class DisplayingUsersTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! UserTableViewCell
         
         cell.user = users[indexPath.row]
-        cell.update(with: user)
+//        cell.configure()
+        cell.update()
+     
 //        let user = users[indexPath.row]
         
         
