@@ -17,11 +17,18 @@ struct ListOfOffices: View {
     let dhm = [DHM(area: "Orem", name: "Billy Bob", affiliation: .republican, estimatedSalary: 50_000)]
     
     var body: some View {
+        
+        let withIndex = cityCouncilor.enumerated().map({ $0 })
+        
         NavigationStack {
             List {
 
-                ForEach(cityCouncilor) { councilor in
-                    NavigationLink("Councilor", value: DetailViewOfCivilServant(councilor: councilor))
+                ForEach(withIndex, id: \.element.name) { index, councilor in
+                    NavigationLink(destination: DetailViewOfCivilServant(councilor: councilor),
+                                   label: {
+                        Text("\(councilor.name)")
+                        
+                    })
                 }
 //
             
