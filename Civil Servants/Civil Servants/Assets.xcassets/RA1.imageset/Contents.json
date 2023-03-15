@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "-methode-sundaytimes-prod-web-bin-e6496bba-3356-11ec-91da-063c6e372e74.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

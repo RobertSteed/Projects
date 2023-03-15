@@ -12,13 +12,20 @@ struct DetailViewOfCivilServant: View, Hashable {
    
     
     
-    let councilor: CityCouncilor?
+    let councilor: CityCouncilor
  
     
-    var body: some View { 
-        Text("\(councilor?.name)")
-        Text("\(councilor?.timeInOffice)")
-        Text("\(councilor?.estimatedSalary)")
+    var body: some View {
+        
+        Image("RA1")
+            .resizable()
+            .frame(maxWidth: .infinity)
+            .frame(height: 200)
+        List {
+            Text("\(councilor.name)")
+            Text("Time in Office: \(councilor.timeInOffice)")
+            Text("Estimated Salary: $\(councilor.estimatedSalary)")
+        }
     }
 }
 

@@ -26,7 +26,7 @@ struct ListOfOffices: View {
                 ForEach(withIndex, id: \.element.name) { index, councilor in
                     NavigationLink(destination: DetailViewOfCivilServant(councilor: councilor),
                                    label: {
-                        Text("\(councilor.name)")
+                        Text("\(index + 1) \(councilor.name)")
                         
                     })
                 }
