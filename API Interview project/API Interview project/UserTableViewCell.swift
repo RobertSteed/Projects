@@ -15,7 +15,6 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var registeredLabel: UILabel!
     @IBOutlet weak var dobLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
@@ -26,23 +25,22 @@ class UserTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+     
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+       
     }
     
     func update() {
         nameLabel.text = user?.name.first
         genderLabel.text = user?.gender
-        locationLabel.text = user?.location.city
+        locationLabel.text = user?.location?.city
         emailLabel.text = user?.email
-//        loginLabel.text = user.login
-        registeredLabel.text = user?.registered.date
-        dobLabel.text = user?.dob.date
+        registeredLabel.text = user?.registered?.date
+        dobLabel.text = user?.dob?.date
         phoneLabel.text = user?.phone
         idLabel.text = user?.id?.name
         nationalityLabel.text = user?.nationality
@@ -57,10 +55,5 @@ class UserTableViewCell: UITableViewCell {
         }
        
     }
-//    func configure() {
-//      
-//     
-//     
-//      }
 
 }

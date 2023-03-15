@@ -37,32 +37,4 @@ class UserInformationClass {
     }
     
     
-//    func getUserInformation(inc: String) async throws -> User {
-//
-//        let session = URLSession.shared
-//        var urlComponents = URLComponents(string: "https://randomuser.me")!
-//
-//        urlComponents.queryItems = [URLQueryItem(name: "inc", value: inc)]
-//        //come back to this later
-//
-//        var request = URLRequest(url: urlComponents.url!)
-//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//
-//        // Make the request
-//        let (data, response) = try await session.data(for: request)
-//
-//        // Ensure we had a good response (status 200)
-//        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-//
-//            throw UserInformationError.couldNotGetInfo}
-//
-//        let decoder = JSONDecoder()
-//
-//        let user = try decoder.decode(User.self, from: data)
-//
-//
-//
-//        return user
-//    }
-    
 }

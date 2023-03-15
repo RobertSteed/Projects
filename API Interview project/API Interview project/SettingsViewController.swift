@@ -70,15 +70,10 @@ class SettingsViewController: UIViewController {
         }
         queryValues.append("picture")
         queryValues.append("name")
-//         else if loginSwitch.isOn {
-//            queryString += "login,"
-//        }
         
         let query = [
             "inc": queryValues.joined(separator: ","),
-            "results": numberOfUsersTextField.text ?? "0"
-            
-        ]
+            "results": numberOfUsersTextField.text ?? "1" ]
         
         do {
             try await users = userInformation.fetchItems(matching: query)
@@ -108,8 +103,6 @@ class SettingsViewController: UIViewController {
         
     }
     
-
-    
     @IBAction func registeredSwitch(_ sender: Any) {
         
     }
@@ -128,7 +121,7 @@ class SettingsViewController: UIViewController {
     @IBAction func nationalitySwitch(_ sender: Any) {
         
     }
-//    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "saveUnwind",
         let vc = segue.destination as? DisplayingUsersTableViewController
@@ -136,13 +129,6 @@ class SettingsViewController: UIViewController {
         vc.users = users
 
     }
-
-//    @IBSegueAction func sendAPIUserInformation(_ coder: NSCoder, sender: Any?) -> DisplayingUsersTableViewController? {
-//        let passedUser = Int(numberOfUsersTextField.text!) ?? 0
-//        print(users.count)
-//        let users = Array(users[0..<passedUser])
-//        return DisplayingUsersTableViewController(coder: coder, users: users)
-//    }
         
     
 }

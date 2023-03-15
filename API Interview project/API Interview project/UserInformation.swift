@@ -10,19 +10,19 @@ import UIKit
 
 
 struct User: Decodable, Encodable {
-    var gender: String
+    var gender: String?
     var name: Name
 
-    var location: UserLocation
+    var location: UserLocation?
     var email: String?
     var login: String?
-    var dob: UserDOB
+    var dob: UserDOB?
     var phone: String?
     var id: UserID?
     var picture: Picture
-    var registered: UserRegistration
+    var registered: UserRegistration?
     var nationality: String?
-//    var results: [User]
+
  
 }
 
