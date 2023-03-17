@@ -6,25 +6,26 @@
 //
 
 import Foundation
-struct DHM: Identifiable {
+struct HM: Identifiable {
     var id = UUID()
     var area: String
     var name: String
-    var affiliation: Affiliation
+    var affiliation: String
     var estimatedSalary: Int
     
 }
 
-enum Affiliation {
-    case republican
-    case democrat
-    case independant
-    case libertarian
-}
+//enum Affiliation {
+//    case republican
+//    case democrat
+//    case independant
+//    case libertarian
+//}
 
-struct Mayor: Identifiable {
+
+struct Mayor: Identifiable, Hashable {
     var id = UUID()
-    var mayor: String
+    var name: String
     var timeInOffice: String
     var estimatedSalary: Int
 }
@@ -35,26 +36,21 @@ struct CityCouncilor: Identifiable, Hashable {
     var estimatedSalary: Int
 }
 
-struct SheriffsOffice {
+struct SheriffsOffice: Identifiable {
+    var id = UUID()
     var sheriff: String
-    var underSheriff: String
     var estimatedSalary: Int
 }
 
-struct SchoolBoard {
-    var meetings: [TimesAndLocations]
-    var members: [Members]
+struct SchoolBoardMember: Identifiable {
+    var id = UUID()
+    var member: String
+    var term: String
+    
 }
 
-struct TimesAndLocations {
+struct TimesAndLocationsForMeetings {
     var date: String
     var location: String
     var time: String
 }
-
-struct Members {
-    var name: String
-    var estimatedSalary: Int
-    var timeInOffice: Int
-}
-

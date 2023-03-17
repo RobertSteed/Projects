@@ -7,11 +7,7 @@
 
 import SwiftUI
 
-struct DetailViewOfCivilServant: View, Hashable {
-    
-   
-    
-    
+struct DetailViewOfCouncilor: View, Hashable {
     let councilor: CityCouncilor
  
     
@@ -31,6 +27,6 @@ struct DetailViewOfCivilServant: View, Hashable {
 
 struct DetailViewOfCivilServant_Previews: PreviewProvider {
     static var previews: some View {
-        DetailViewOfCivilServant(councilor: CityCouncilor(name: "", timeInOffice: "", estimatedSalary: 0))
+        DetailViewOfCouncilor(councilor: CityCouncilor(name: "", timeInOffice: "", estimatedSalary: 0))
     }
 }

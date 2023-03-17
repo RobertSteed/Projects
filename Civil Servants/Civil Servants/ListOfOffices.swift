@@ -10,11 +10,24 @@ import SwiftUI
 struct ListOfOffices: View {
     
     let mayor =
-        Mayor(mayor: "David Young", timeInOffice: "One Year", estimatedSalary: 60_000)
+    Mayor(name: "David Young", timeInOffice: "One Year", estimatedSalary: 60_000)
     
     let cityCouncilor = [CityCouncilor(name: "Jeff Lambson", timeInOffice: "First Year", estimatedSalary: 27_000), CityCouncilor(name: "Debby Lauret", timeInOffice: "First Year", estimatedSalary: 27_000), CityCouncilor(name: "Tom MacDonald", timeInOffice: "Third Year", estimatedSalary: 27_000)]
-//
-    let dhm = [DHM(area: "Orem", name: "Billy Bob", affiliation: .republican, estimatedSalary: 50_000)]
+    //
+    let hm = [
+        HM(area: "Orem", name: "Billy Bob", affiliation: "R", estimatedSalary: 50_000),
+        HM(area: "Provo", name: "Dirty Dan", affiliation: "D", estimatedSalary: 50_000),
+        HM(area: "Salem", name: "PinheadLarry", affiliation: "I", estimatedSalary: 50_000)
+    ]
+    
+    let sheriff = SheriffsOffice(sheriff: "Sherrifson", estimatedSalary: 70_000)
+    
+    let schoolBoard = [
+        SchoolBoardMember(member: "Stacy", term: "First Term"),
+        SchoolBoardMember(member: "Sarah", term: "Second Term"),
+        SchoolBoardMember(member: "Mark", term: "Second Term")
+    ]
+    
     
     var body: some View {
         
@@ -22,22 +35,55 @@ struct ListOfOffices: View {
         
         NavigationStack {
             List {
-
-                ForEach(withIndex, id: \.element.name) { index, councilor in
-                    NavigationLink(destination: DetailViewOfCivilServant(councilor: councilor),
-                                   label: {
-                        Text("\(index + 1) \(councilor.name)")
-                        
-                    })
+                Section {
+                    ForEach(cityCouncilor, id: \.self) { councilor in
+                        NavigationLink(destination: DetailViewOfCouncilor(councilor: councilor),
+                                       label: {
+                            Text("\(councilor.name)")
+                        })
+                    }
+                } header: {
+                    Text("City Council")
                 }
-//
-            
-//
-//
+                Section {
+                    NavigationLink("\(mayor.name)", destination: DetailViewOfMayor(mayor: mayor))
+                }
+            header: {
+                Text("Mayor")
             }
+                
+                Section {
+                    ForEach(hm) { hM in
+                        NavigationLink(destination: DetailViewOfHM(hm: hM), label: {
+                            Text("\(hM.name)")
+                        })
+                    }
+                } header: {
+                    Text("House Members")
+                }
+                
+                Section {
+                    ForEach(schoolBoard) { schoolBoardMember in
+                        NavigationLink(destination: DetailViewOfSchoolBoard(schoolBoard: schoolBoardMember), label: {
+                            Text("\(schoolBoardMember.member)")
+                        })
+                    }
+                } header: {
+                    Text("School Board")
+                }
+                
+                Section {
+                    NavigationLink("\(sheriff.sheriff)", destination: DetailViewOfSheriff(sheriff: sheriff))
+                }
+            header: {
+                Text("Sheriffs Office")
+            }
+                
+                
+            } .navigationTitle("Elected Officials")
             
         }
-        
+                        
     }
 }
 
