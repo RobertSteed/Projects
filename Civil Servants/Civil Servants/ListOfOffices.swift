@@ -20,12 +20,12 @@ struct ListOfOffices: View {
         HM(area: "Salem", name: "PinheadLarry", affiliation: "I", estimatedSalary: 50_000)
     ]
     
-    let sheriff = SheriffsOffice(sheriff: "Sherrifson", estimatedSalary: 70_000)
+    let sheriff = SheriffsOffice(name: "Sherrifson", estimatedSalary: 70_000)
     
     let schoolBoard = [
-        SchoolBoardMember(member: "Stacy", term: "First Term"),
-        SchoolBoardMember(member: "Sarah", term: "Second Term"),
-        SchoolBoardMember(member: "Mark", term: "Second Term")
+        SchoolBoardMember(name: "Stacy", term: "First Term", estimatedSalary: 68_000),
+        SchoolBoardMember(name: "Sarah", term: "Second Term", estimatedSalary: 68_000),
+        SchoolBoardMember(name: "Mark", term: "Second Term", estimatedSalary: 68_000)
     ]
     
     
@@ -65,7 +65,7 @@ struct ListOfOffices: View {
                 Section {
                     ForEach(schoolBoard) { schoolBoardMember in
                         NavigationLink(destination: DetailViewOfSchoolBoard(schoolBoard: schoolBoardMember), label: {
-                            Text("\(schoolBoardMember.member)")
+                            Text("\(schoolBoardMember.name)")
                         })
                     }
                 } header: {
@@ -73,7 +73,7 @@ struct ListOfOffices: View {
                 }
                 
                 Section {
-                    NavigationLink("\(sheriff.sheriff)", destination: DetailViewOfSheriff(sheriff: sheriff))
+                    NavigationLink("\(sheriff.name)", destination: DetailViewOfSheriff(sheriff: sheriff))
                 }
             header: {
                 Text("Sheriffs Office")

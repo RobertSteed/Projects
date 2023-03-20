@@ -27,7 +27,7 @@ struct Initial_Capital_View: View {
                     .background(.white)
                     .opacity(opacity)
                 .alert("We would like access to your location", isPresented: $showingAlert) {
-                    NavigationLink("Ok!", destination: ListOfOffices())
+                    NavigationLink("Ok!", destination: TabBarView())
                 }
                 
             } .navigationTitle("Civil Servant")

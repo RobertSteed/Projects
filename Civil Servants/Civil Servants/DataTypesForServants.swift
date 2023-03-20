@@ -38,14 +38,15 @@ struct CityCouncilor: Identifiable, Hashable {
 
 struct SheriffsOffice: Identifiable {
     var id = UUID()
-    var sheriff: String
+    var name: String
     var estimatedSalary: Int
 }
 
 struct SchoolBoardMember: Identifiable {
     var id = UUID()
-    var member: String
+    var name: String
     var term: String
+    var estimatedSalary: Int
     
 }
 
