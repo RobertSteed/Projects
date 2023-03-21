@@ -4,38 +4,53 @@
 //
 //  Created by Robert Steed on 3/20/23.
 //
-
+import UIKit
 import SwiftUI
+import FSCalendar
 
 struct CalendarView: View {
     
     @State var selectedDate: Date = Date()
     
     var body: some View {
-        VStack(alignment: .center, spacing: 0) {
-            Text(selectedDate.formatted(date: .abbreviated, time: .omitted))
-                .font(.system(size: 28))
-                .bold()
-                .foregroundColor(Color.accentColor)
-                .padding()
-                .animation(.spring(), value: selectedDate)
-                .frame(width: 500)
-            Divider().frame(height: 1)
-            DatePicker("Select Date", selection: $selectedDate, displayedComponents: [.date])
-                .padding(.horizontal)
-                .datePickerStyle(.graphical)
-            Divider()
+        VStack {
+            FormattedDate(selectedDate: selectedDate, omitTime: true)
+            CalendarViewRepresentable(selectedDate: $selectedDate)
         }
-        .padding(.vertical, 200)
-        
     }
 }
     
-    struct CalendarView_Previews: PreviewProvider {
-        static var previews: some View {
-            CalendarView()
-        }
+struct CalendarViewRepresentable: UIViewRepresentable {
+    typealias UIViewType = FSCalendar
+    fileprivate var calendar = FSCalendar()
+    @Binding var selectedDate: Date
+
+    func makeUIView(context: Context) -> FSCalendar {
+        calendar.delegate = context.coordinator
+        calendar.dataSource = context.coordinator
+        return calendar
     }
+
+    func updateUIView(_ uiView: FSCalendar, context: Context) {}
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+
+    class Coordinator: NSObject,
+          FSCalendarDelegate, FSCalendarDataSource {
+        
+        func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+            parent.selectedDate = date
+        }
+        
+            var parent: CalendarViewRepresentable
+
+            init(_ parent: CalendarViewRepresentable) {
+                self.parent = parent
+            }
+    }
+}
 
 
 //    VStack {

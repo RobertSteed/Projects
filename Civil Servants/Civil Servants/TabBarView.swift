@@ -14,13 +14,19 @@ struct TabBarView: View {
                  .tabItem {
                    Label("Officials", systemImage: "checkerboard.shield")
                  }
-               CalendarView()
-                 .tabItem{
-                   Label("Meeting Times", systemImage: "calendar")
+            
+            
+            ListOfMeetings()
+                .tabItem {
+                    Label("Meeting Times", systemImage: "calendar")
+                }
+//               CalendarView()
+//                 .tabItem{
+//                   Label("Meeting Times", systemImage: "calendar")
                  }
              }
            }
-         }
+         
 
 struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {

@@ -25,6 +25,10 @@
 		75BDC6FA29C89EAD0041D97B /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BDC6F929C89EAD0041D97B /* CalendarView.swift */; };
 		75BDC6FC29C89F4D0041D97B /* DataTypesForCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BDC6FB29C89F4D0041D97B /* DataTypesForCalendar.swift */; };
 		75BDC6FE29C8A3BA0041D97B /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BDC6FD29C8A3BA0041D97B /* TabBarView.swift */; };
+		75BDC70129C9F3480041D97B /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 75BDC70029C9F3480041D97B /* FSCalendar */; };
+		75BDC70329C9F5710041D97B /* FormattedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BDC70229C9F5710041D97B /* FormattedView.swift */; };
+		75BDC70529CA01C30041D97B /* ListOfMeetings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BDC70429CA01C30041D97B /* ListOfMeetings.swift */; };
+		75BDC70729CA1D830041D97B /* DetailOfMeetings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BDC70629CA1D830041D97B /* DetailOfMeetings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,9 @@
 		75BDC6F929C89EAD0041D97B /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		75BDC6FB29C89F4D0041D97B /* DataTypesForCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypesForCalendar.swift; sourceTree = "<group>"; };
 		75BDC6FD29C8A3BA0041D97B /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		75BDC70229C9F5710041D97B /* FormattedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedView.swift; sourceTree = "<group>"; };
+		75BDC70429CA01C30041D97B /* ListOfMeetings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMeetings.swift; sourceTree = "<group>"; };
+		75BDC70629CA1D830041D97B /* DetailOfMeetings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOfMeetings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75BDC70129C9F3480041D97B /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +129,8 @@
 				7534FBD029C0C22100EB88B5 /* Initial Capital View.swift */,
 				75BDC6FD29C8A3BA0041D97B /* TabBarView.swift */,
 				750D888329B8DE3F00D2B769 /* ListOfOffices.swift */,
-				75BDC6F929C89EAD0041D97B /* CalendarView.swift */,
+				75BDC70429CA01C30041D97B /* ListOfMeetings.swift */,
+				75BDC70629CA1D830041D97B /* DetailOfMeetings.swift */,
 				75BDC6F529C4C7330041D97B /* DetailViewOfSheriff.swift */,
 				75BDC6F329C4C5310041D97B /* DetailViewOfSchoolBoard.swift */,
 				75BDC6F129C366C80041D97B /* DetailViewOfHM.swift */,
@@ -129,6 +138,8 @@
 				75BDC6EF29C35E830041D97B /* DetailViewOfMayor.swift */,
 				75BDC6FB29C89F4D0041D97B /* DataTypesForCalendar.swift */,
 				750D888529B8DF7900D2B769 /* DataTypesForServants.swift */,
+				75BDC6F929C89EAD0041D97B /* CalendarView.swift */,
+				75BDC70229C9F5710041D97B /* FormattedView.swift */,
 				750D885B29B8D98C00D2B769 /* Assets.xcassets */,
 				750D885D29B8D98C00D2B769 /* Preview Content */,
 			);
@@ -176,6 +187,9 @@
 			dependencies = (
 			);
 			name = "Civil Servants";
+			packageProductDependencies = (
+				75BDC70029C9F3480041D97B /* FSCalendar */,
+			);
 			productName = "Civil Servants";
 			productReference = 750D885429B8D98A00D2B769 /* Civil Servants.app */;
 			productType = "com.apple.product-type.application";
@@ -248,6 +262,9 @@
 				Base,
 			);
 			mainGroup = 750D884B29B8D98A00D2B769;
+			packageReferences = (
+				75BDC6FF29C9F3480041D97B /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
 			productRefGroup = 750D885529B8D98A00D2B769 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -295,13 +312,16 @@
 				75BDC6FE29C8A3BA0041D97B /* TabBarView.swift in Sources */,
 				750D885829B8D98A00D2B769 /* Civil_ServantsApp.swift in Sources */,
 				750D888829BA3D1000D2B769 /* DetailViewOfCouncilor.swift in Sources */,
+				75BDC70529CA01C30041D97B /* ListOfMeetings.swift in Sources */,
 				75BDC6F629C4C7330041D97B /* DetailViewOfSheriff.swift in Sources */,
 				75BDC6F429C4C5310041D97B /* DetailViewOfSchoolBoard.swift in Sources */,
 				75BDC6F229C366C80041D97B /* DetailViewOfHM.swift in Sources */,
 				75BDC6FA29C89EAD0041D97B /* CalendarView.swift in Sources */,
+				75BDC70329C9F5710041D97B /* FormattedView.swift in Sources */,
 				750D888429B8DE3F00D2B769 /* ListOfOffices.swift in Sources */,
 				75BDC6FC29C89F4D0041D97B /* DataTypesForCalendar.swift in Sources */,
 				7534FBD129C0C22100EB88B5 /* Initial Capital View.swift in Sources */,
+				75BDC70729CA1D830041D97B /* DetailOfMeetings.swift in Sources */,
 				75BDC6F029C35E830041D97B /* DetailViewOfMayor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,6 +647,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		75BDC6FF29C9F3480041D97B /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		75BDC70029C9F3480041D97B /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75BDC6FF29C9F3480041D97B /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 750D884C29B8D98A00D2B769 /* Project object */;
 }

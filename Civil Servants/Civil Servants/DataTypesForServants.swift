@@ -50,8 +50,11 @@ struct SchoolBoardMember: Identifiable {
     
 }
 
-struct TimesAndLocationsForMeetings {
+struct TimesAndLocationsForMeetings: Identifiable, Hashable {
+    var id = UUID()
     var date: String
     var location: String
     var time: String
+    var name: String
 }
+
