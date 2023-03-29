@@ -13,7 +13,7 @@ struct DetailViewOfSheriff: View {
     
     var body: some View {
         
-        Image("RA1")
+        Image("\(sheriff.picture)")
             .resizable()
             .frame(maxWidth: .infinity)
             .frame(height: 200)
@@ -26,6 +26,6 @@ struct DetailViewOfSheriff: View {
 
 struct DetailViewOfSheriff_Previews: PreviewProvider {
     static var previews: some View {
-        DetailViewOfSheriff(sheriff: SheriffsOffice(name: "", estimatedSalary: 0, publicPhoneNumber: ""))
+        DetailViewOfSheriff(sheriff: SheriffsOffice(name: "", estimatedSalary: 0, publicPhoneNumber: "", picture: ""))
     }
 }

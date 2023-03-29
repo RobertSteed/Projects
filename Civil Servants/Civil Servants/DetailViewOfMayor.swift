@@ -13,7 +13,7 @@ struct DetailViewOfMayor: View {
     
     var body: some View {
         
-        Image("RA1")
+        Image("\(mayor.picture)")
             .resizable()
             .frame(maxWidth: .infinity)
             .frame(height: 200)
