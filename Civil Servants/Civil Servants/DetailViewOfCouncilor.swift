@@ -15,6 +15,7 @@ struct DetailViewOfCouncilor: View, Hashable {
         
         Image("\(councilor.picture)")
             .resizable()
+            .aspectRatio(contentMode: .fit)
             .frame(maxWidth: .infinity)
             .frame(height: 200)
         List {

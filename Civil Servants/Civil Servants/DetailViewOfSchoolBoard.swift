@@ -15,6 +15,7 @@ struct DetailViewOfSchoolBoard: View {
         
         Image("\(schoolBoard.picture)")
             .resizable()
+            .aspectRatio(contentMode: .fit)
             .frame(maxWidth: .infinity)
             .frame(height: 200)
         List {

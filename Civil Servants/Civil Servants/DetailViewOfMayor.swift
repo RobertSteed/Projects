@@ -15,6 +15,7 @@ struct DetailViewOfMayor: View {
         
         Image("\(mayor.picture)")
             .resizable()
+            .aspectRatio(contentMode: .fit)
             .frame(maxWidth: .infinity)
             .frame(height: 200)
         List {

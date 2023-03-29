@@ -15,6 +15,7 @@ struct DetailViewOfSheriff: View {
         
         Image("\(sheriff.picture)")
             .resizable()
+            .aspectRatio(contentMode: .fit)
             .frame(maxWidth: .infinity)
             .frame(height: 200)
         List {
