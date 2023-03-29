@@ -27,6 +27,6 @@ struct DetailViewOfCouncilor: View, Hashable {
 
 struct DetailViewOfCivilServant_Previews: PreviewProvider {
     static var previews: some View {
-        DetailViewOfCouncilor(councilor: CityCouncilor(name: "", timeInOffice: "", estimatedSalary: 0))
+        DetailViewOfCouncilor(councilor: CityCouncilor(name: "", timeInOffice: "", estimatedSalary: 0, publicPhoneNumber: ""))
     }
 }

@@ -31,6 +31,6 @@ struct DetailViewOfHM: View {
 
 struct DetailViewOfHM_Previews: PreviewProvider {
     static var previews: some View {
-        DetailViewOfHM(hm: HM(area: "", name: "", affiliation: "", estimatedSalary: 0))
+        DetailViewOfHM(hm: HM(area: "", name: "", affiliation: "", estimatedSalary: 0, publicPhoneNumber: ""))
     }
 }

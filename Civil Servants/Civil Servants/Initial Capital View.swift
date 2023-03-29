@@ -16,6 +16,7 @@ struct Initial_Capital_View: View {
     var body: some View {
         NavigationStack {
             ZStack {
+                
                 Image("State Capitol")
                 
                 

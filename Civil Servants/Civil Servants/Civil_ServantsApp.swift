@@ -12,7 +12,9 @@ struct Civil_ServantsApp: App {
     var body: some Scene {
         WindowGroup {
             Initial_Capital_View()
+                    
+                }
             
         }
     }
-} 
+

@@ -26,6 +26,6 @@ struct DetailViewOfMayor: View {
 }
 struct DetailViewOfMayor_Previews: PreviewProvider {
     static var previews: some View {
-        DetailViewOfMayor(mayor: Mayor(name: "", timeInOffice: "", estimatedSalary: 0))
+        DetailViewOfMayor(mayor: Mayor(name: "", timeInOffice: "", estimatedSalary: 0, publicPhoneNumber: "", picture: ""))
     }
 }

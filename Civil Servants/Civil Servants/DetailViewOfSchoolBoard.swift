@@ -27,6 +27,6 @@ struct DetailViewOfSchoolBoard: View {
 
 struct DetailViewOfSchoolBoard_Previews: PreviewProvider {
     static var previews: some View {
-        DetailViewOfSchoolBoard(schoolBoard: SchoolBoardMember(name: "", term: "", estimatedSalary: 0))
+        DetailViewOfSchoolBoard(schoolBoard: SchoolBoardMember(name: "", term: "", estimatedSalary: 0, publicPhoneNumber: ""))
     }
 }

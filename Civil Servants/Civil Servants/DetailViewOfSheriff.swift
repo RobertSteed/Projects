@@ -26,6 +26,6 @@ struct DetailViewOfSheriff: View {
 
 struct DetailViewOfSheriff_Previews: PreviewProvider {
     static var previews: some View {
-        DetailViewOfSheriff(sheriff: SheriffsOffice(name: "", estimatedSalary: 0))
+        DetailViewOfSheriff(sheriff: SheriffsOffice(name: "", estimatedSalary: 0, publicPhoneNumber: ""))
     }
 }

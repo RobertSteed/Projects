@@ -12,7 +12,8 @@ struct HM: Identifiable {
     var name: String
     var affiliation: String
     var estimatedSalary: Int
-    
+    var publicPhoneNumber: String
+    var picture: String
 }
 
 //enum Affiliation {
@@ -28,18 +29,24 @@ struct Mayor: Identifiable, Hashable {
     var name: String
     var timeInOffice: String
     var estimatedSalary: Int
+    var publicPhoneNumber: String
+    var picture: String
 }
 struct CityCouncilor: Identifiable, Hashable {
     var id = UUID()
     var name: String
     var timeInOffice: String
     var estimatedSalary: Int
+    var publicPhoneNumber: String
+    var picture: String
 }
 
 struct SheriffsOffice: Identifiable {
     var id = UUID()
     var name: String
     var estimatedSalary: Int
+    var publicPhoneNumber: String
+    var picture: String
 }
 
 struct SchoolBoardMember: Identifiable {
@@ -47,7 +54,8 @@ struct SchoolBoardMember: Identifiable {
     var name: String
     var term: String
     var estimatedSalary: Int
-    
+    var publicPhoneNumber: String
+    var picture: String
 }
 
 struct TimesAndLocationsForMeetings: Identifiable, Hashable {
