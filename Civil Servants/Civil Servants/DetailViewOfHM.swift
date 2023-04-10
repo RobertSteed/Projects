@@ -14,19 +14,27 @@ struct DetailViewOfHM: View {
     let hm: HM
     
     var body: some View {
+        ZStack {
+        LinearGradient(colors: [.blue, .white], startPoint: .top, endPoint: .center)
+            .edgesIgnoringSafeArea(.vertical)
+            .overlay(
         
-        Image("\(hm.picture)")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(maxWidth: .infinity)
-            .frame(height: 200)
+     
         List {
+            Image("\(hm.picture)")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(maxWidth: .infinity)
+                .frame(height: 200)
             Text("\(hm.name)")
             Text("Time in Office: \(hm.affiliation)")
             Text("Time in Office: \(hm.area)")
             Text("Estimated Salary: $\(hm.estimatedSalary)")
             
-        }
+        }.scrollContentBackground(.hidden)
+        )
+        
+    }
     }
 }
 

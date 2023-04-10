@@ -12,16 +12,22 @@ struct DetailViewOfMayor: View {
     let mayor: Mayor
     
     var body: some View {
-        
-        Image("\(mayor.picture)")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(maxWidth: .infinity)
-            .frame(height: 200)
-        List {
-            Text("\(mayor.name)")
-            Text("Time in Office: \(mayor.timeInOffice)")
-            Text("Estimated Salary: $\(mayor.estimatedSalary)")
+        ZStack {
+            LinearGradient(colors: [.blue, .white], startPoint: .top, endPoint: .center)
+                .edgesIgnoringSafeArea(.vertical)
+                .overlay(
+                    
+                    List {
+                        Image("\(mayor.picture)")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 200)
+                        Text("\(mayor.name)")
+                        Text("Time in Office: \(mayor.timeInOffice)")
+                        Text("Estimated Salary: $\(mayor.estimatedSalary)")
+                    } .scrollContentBackground(.hidden)
+                )
         }
     }
 }

@@ -12,12 +12,23 @@ struct DetailOfMeetings: View {
     var meetings: TimesAndLocationsForMeetings
     
     var body: some View {
+        LinearGradient(colors: [.blue, .white], startPoint: .top, endPoint: .center)
+            .edgesIgnoringSafeArea(.vertical)
+            .overlay(
         List {
-            Text("Date: \(meetings.date)")
-            Text("Time: \(meetings.time)")
-            Text("Location: \(meetings.location)")
+            VStack {
+                Text("Date: \(meetings.date)")
+                    .padding()
+                Text("Time: \(meetings.time)")
+                    .padding()
+                Text("Location: \(meetings.location)")
+                    .padding()
+                
+            }
             
         } .navigationTitle(meetings.name)
+            .scrollContentBackground(.hidden)
+        )
     }
 }
 

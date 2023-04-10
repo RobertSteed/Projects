@@ -9,25 +9,44 @@ import SwiftUI
 
 struct ListOfMeetings: View {
     
-    let meetings = [TimesAndLocationsForMeetings(date: "04/02/23", location: "City Hall, Orem", time: "7:00 PM", name: "City Council"),
-                    TimesAndLocationsForMeetings(date: "04/06/23", location: "City Hall, Orem", time: "6:00 PM", name: "Mayors Office"),
-                    TimesAndLocationsForMeetings(date: "04/12/23", location: "City Hall, Provo", time: "8:00 PM", name: "Sheriffs Office"),
-                    TimesAndLocationsForMeetings(date: "04/17/23", location: "Lone Peak High School", time: "5:30 PM", name: "School Board"),
-                    TimesAndLocationsForMeetings(date: "04/21/23", location: "State Municipal Building, American Fork", time: "8:00 PM", name: "House Members")]
+    let meetings = [
+                    TimesAndLocationsForMeetings(date: "04/11/23", location: "Orem City Center, 56 North State Street, Orem, Utah", time: "3:00 PM", name: "City Council"),
+                    TimesAndLocationsForMeetings(date: "04/25/23", location: "Orem City Center, 56 North State Street, Orem, Utah", time: "3:00 PM", name: "City Council"),
+                    TimesAndLocationsForMeetings(date: "05/09/23", location: "Orem City Center, 56 North State Street, Orem, Utah", time: "3:00 PM", name: "City Council"),
+                    TimesAndLocationsForMeetings(date: "05/23/23", location: "Orem City Center, 56 North State Street, Orem, Utah", time: "3:00 PM", name: "City Council"),
+                    TimesAndLocationsForMeetings(date: "06/13/23", location: "Orem City Center, 56 North State Street, Orem, Utah", time: "3:00 PM", name: "City Council"),
+                    TimesAndLocationsForMeetings(date: "6/27/23", location: "Orem City Center, 56 North State Street, Orem, Utah", time: "3:00 PM", name: "City Council"),
+                    TimesAndLocationsForMeetings(date: "05/09/23", location: " 575 North 100 East American Fork, UT 84003", time: "6:00 PM", name: "School Board"),
+                    TimesAndLocationsForMeetings(date: "06/20/23", location: " 575 North 100 East American Fork, UT 84003", time: "6:00 PM", name: "School Board"),
+                    TimesAndLocationsForMeetings(date: "07/11/23", location: " 575 North 100 East American Fork, UT 84003", time: "6:00 PM", name: "School Board"),
+                    TimesAndLocationsForMeetings(date: "08/08/23", location: " 575 North 100 East American Fork, UT 84003", time: "6:00 PM", name: "School Board"),
+                    TimesAndLocationsForMeetings(date: "04/12/23", location: "State Capitol", time: "8:00 AM", name: "House Members"),
+                    TimesAndLocationsForMeetings(date: "05/03/23", location: "State Capitol", time: "3:00 PM", name: "House Members"),
+                    TimesAndLocationsForMeetings(date: "08/03/23", location: "State Capitol", time: "3:00 PM", name: "House Members")]
     
     
     var body: some View {
         NavigationStack {
-            List {
-                Section {
-                    ForEach(meetings, id: \.self) { meeting in
-                        NavigationLink(destination: DetailOfMeetings(meetings: meeting),
-                                       label: {
-                            Text("\(meeting.name)")
-                        })
+            ZStack {
+                LinearGradient(colors: [.blue, .white], startPoint: .top, endPoint: .center)
+                    .edgesIgnoringSafeArea(.vertical)
+                    .overlay(
+                List {
+                    Section {
+                        ForEach(meetings, id: \.self) { meeting in
+                            NavigationLink(destination: DetailOfMeetings(meetings: meeting),
+                                           label: {
+                                VStack {
+                                    Text("\(meeting.name)")
+                                    Text(" \(meeting.date)")
+                                }
+                            })
+                        }
                     }
-                }
-            } .navigationTitle("List of Meetings")
+                } .navigationTitle("List of Meetings")
+                    .scrollContentBackground(.hidden)
+            )
+            }
         }
     }
 }

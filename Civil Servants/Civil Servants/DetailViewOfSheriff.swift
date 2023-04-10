@@ -12,15 +12,21 @@ struct DetailViewOfSheriff: View {
     var sheriff: SheriffsOffice
     
     var body: some View {
-        
-        Image("\(sheriff.picture)")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(maxWidth: .infinity)
-            .frame(height: 200)
-        List {
-            Text("\(sheriff.name)")
-            Text("Estimated Salary: $\(sheriff.estimatedSalary)")
+        ZStack{
+            LinearGradient(colors: [.blue, .white], startPoint: .top, endPoint: .center)
+                .edgesIgnoringSafeArea(.vertical)
+                .overlay(
+                    List {
+                        Image("\(sheriff.picture)")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 200)
+                        
+                        Text("\(sheriff.name)")
+                        Text("Estimated Salary: $\(sheriff.estimatedSalary)")
+                    }.scrollContentBackground(.hidden)
+                )
         }
     }
 }

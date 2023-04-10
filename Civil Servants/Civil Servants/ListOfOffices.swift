@@ -58,61 +58,68 @@ struct ListOfOffices: View {
         let withIndex = cityCouncilor.enumerated().map({ $0 })
         
         NavigationStack {
-            List {
-                Section {
-                    ForEach(cityCouncilor, id: \.self) { councilor in
-                        NavigationLink(destination: DetailViewOfCouncilor(councilor: councilor),
-                                       label: {
-                            Text("\(councilor.name)")
-                        })
-                    }
-                } header: {
-                    Text("City Council")
+            ZStack {
+                LinearGradient(colors: [.blue, .white], startPoint: .top, endPoint: .center)
+                    .edgesIgnoringSafeArea(.vertical)
+                    .overlay(
+                        List {
+                            Section {
+                                ForEach(cityCouncilor, id: \.self) { councilor in
+                                    NavigationLink(destination: DetailViewOfCouncilor(councilor: councilor),
+                                                   label: {
+                                        Text("\(councilor.name)")
+                                    })
+                                }
+                            } header: {
+                                Text("City Council")
+                            }
+                            Section {
+                                NavigationLink("\(mayor.name)", destination: DetailViewOfMayor(mayor: mayor))
+                            }
+                        header: {
+                            Text("Mayor")
+                        }
+                            
+                            Section {
+                                ForEach(hm) { hM in
+                                    NavigationLink(destination: DetailViewOfHM(hm: hM), label: {
+                                        Text("\(hM.name)")
+                                    })
+                                }
+                            } header: {
+                                Text("House Members")
+                            }
+                            
+                            Section {
+                                ForEach(schoolBoard) { schoolBoardMember in
+                                    NavigationLink(destination: DetailViewOfSchoolBoard(schoolBoard: schoolBoardMember), label: {
+                                        Text("\(schoolBoardMember.name)")
+                                    })
+                                }
+                            } header: {
+                                Text("School Board")
+                            }
+                            
+                            Section {
+                                NavigationLink("\(sheriff.name)", destination: DetailViewOfSheriff(sheriff: sheriff))
+                            }
+                        header: {
+                            Text("Sheriffs Office")
+                        }
+                            
+                            
+                        } .navigationTitle("Elected Officials")
+                            .scrollContentBackground(.hidden)
+                        )
                 }
-                Section {
-                    NavigationLink("\(mayor.name)", destination: DetailViewOfMayor(mayor: mayor))
-                }
-            header: {
-                Text("Mayor")
+                    
             }
-                
-                Section {
-                    ForEach(hm) { hM in
-                        NavigationLink(destination: DetailViewOfHM(hm: hM), label: {
-                            Text("\(hM.name)")
-                        })
-                    }
-                } header: {
-                    Text("House Members")
-                }
-                
-                Section {
-                    ForEach(schoolBoard) { schoolBoardMember in
-                        NavigationLink(destination: DetailViewOfSchoolBoard(schoolBoard: schoolBoardMember), label: {
-                            Text("\(schoolBoardMember.name)")
-                        })
-                    }
-                } header: {
-                    Text("School Board")
-                }
-                
-                Section {
-                    NavigationLink("\(sheriff.name)", destination: DetailViewOfSheriff(sheriff: sheriff))
-                }
-            header: {
-                Text("Sheriffs Office")
-            }
-                
-                
-            } .navigationTitle("Elected Officials")
-            
+        
         }
-                        
     }
-}
-
-struct ListOfOffices_Previews: PreviewProvider {
-    static var previews: some View {
-        ListOfOffices()
-    }
-}
+        struct ListOfOffices_Previews: PreviewProvider {
+            static var previews: some View {
+                ListOfOffices()
+            }
+        }
+    
