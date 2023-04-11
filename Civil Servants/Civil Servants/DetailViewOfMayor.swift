@@ -26,6 +26,7 @@ struct DetailViewOfMayor: View {
                         Text("\(mayor.name)")
                         Text("Time in Office: \(mayor.timeInOffice)")
                         Text("Estimated Salary: $\(mayor.estimatedSalary)")
+                        Link("\(mayor.publicPhoneNumber)", destination: URL(string: "tel:\(mayor.publicPhoneNumber)")!)
                     } .scrollContentBackground(.hidden)
                 )
         }

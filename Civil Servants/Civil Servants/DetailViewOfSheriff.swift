@@ -25,6 +25,7 @@ struct DetailViewOfSheriff: View {
                         
                         Text("\(sheriff.name)")
                         Text("Estimated Salary: $\(sheriff.estimatedSalary)")
+                        Link("\(sheriff.publicPhoneNumber)", destination: URL(string: "tel:\(sheriff.publicPhoneNumber)")!)
                     }.scrollContentBackground(.hidden)
                 )
         }

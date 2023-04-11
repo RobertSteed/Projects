@@ -30,7 +30,7 @@ struct DetailViewOfHM: View {
             Text("Time in Office: \(hm.affiliation)")
             Text("Time in Office: \(hm.area)")
             Text("Estimated Salary: $\(hm.estimatedSalary)")
-            
+            Link("\(hm.publicPhoneNumber)", destination: URL(string: "tel:\(hm.publicPhoneNumber)")!)
         }.scrollContentBackground(.hidden)
         )
         

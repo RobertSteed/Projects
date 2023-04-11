@@ -26,6 +26,7 @@ struct DetailViewOfCouncilor: View, Hashable {
                         Text("\(councilor.name)")
                         Text("Time in Office: \(councilor.timeInOffice)")
                         Text("Estimated Salary: $\(councilor.estimatedSalary)")
+                        Link("\(councilor.publicPhoneNumber)", destination: URL(string: "tel:\(councilor.publicPhoneNumber)")!)
                     }.scrollContentBackground(.hidden)
                 )
         }

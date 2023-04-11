@@ -27,6 +27,7 @@ struct DetailViewOfSchoolBoard: View {
                         Text("\(schoolBoard.name)")
                         Text("Time in Office: \(schoolBoard.term)")
                         Text("Estimated Salary: $\(schoolBoard.estimatedSalary)")
+                        Link("\(schoolBoard.publicPhoneNumber)", destination: URL(string: "tel:\(schoolBoard.publicPhoneNumber)")!)
                     }.scrollContentBackground(.hidden)
                 )
         }
